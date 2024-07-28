@@ -1,0 +1,28 @@
+[gd_scene load_steps=3 format=3 uid="uid://d3gqh1fg0an2n"]
+
+[ext_resource type="Script" path="res://dead.gd" id="1_5lmja"]
+[ext_resource type="Texture2D" uid="uid://c41xd82b56ctw" path="res://Sunny Land Collection Files/Assets/Packs/Sunnyland/environment/Background/back.png" id="2_0shag"]
+
+[node name="dead" type="Node2D"]
+script = ExtResource("1_5lmja")
+
+[node name="Back" type="Sprite2D" parent="."]
+position = Vector2(575, 326)
+scale = Vector2(2.98958, 2.7)
+texture = ExtResource("2_0shag")
+
+[node name="DeathMessage" type="Label" parent="."]
+offset_left = 529.0
+offset_top = 545.0
+offset_right = 648.0
+offset_bottom = 608.0
+text = "You are dead!"
+
+[node name="MenuButton" type="Button" parent="."]
+offset_left = 921.0
+offset_top = 530.0
+offset_right = 1102.0
+offset_bottom = 613.0
+text = "Go to main Menu"
+
+[connection signal="pressed" from="MenuButton" to="." method="_on_play_again_button_pressed"]
